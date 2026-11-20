@@ -14,7 +14,10 @@ android {
         versionCode = 1
         versionName = "1.0"
         externalNativeBuild {
-            cmake { cppFlags("-std=c++17") }
+            cmake {
+                cppFlags("-std=c++17")
+                arguments("-DANDROID_STL=c++_shared")
+            }
         }
     }
 
